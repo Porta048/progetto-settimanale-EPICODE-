@@ -1,0 +1,377 @@
+/* reset base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: #393d41;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #25a2c3;
+}
+
+.container {
+    padding: 30px 30px;
+    text-align: center;
+}
+
+/* header con logo */
+header {
+    background-color: black;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* sezione hero con immagine di sfondo */
+.hero {
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 60px 30px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #25a2c3;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    color: #393d41;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f04c2f;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* sezioni contenuto */
+.section-white {
+    background-color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-white:nth-of-type(even) {
+    background-color: #f5f5f5;
+}
+
+.section-white h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.section-white p {
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+.full-width-img {
+    width: 250px;
+    height: 250px;
+    margin: 30px auto;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+}
+
+/* citazione con sfondo rosso */
+.testimonial-section {
+    background-color: #e22d0e;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.testimonial-section h2 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.testimonial-section .quote {
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    color: white;
+    line-height: 1.5;
+}
+
+.testimonial-section .author {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.testimonial-section .author-title {
+    font-size: 0.85rem;
+    color: white;
+}
+
+/* card con foto */
+.images-section {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.images-grid {
+    text-align: center;
+    margin: 0 30px 40px 30px;
+    background-color: white;
+    border: 1px solid #dee1e3;
+    border-radius: 5px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.images-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 0;
+    display: block;
+}
+
+.image-content {
+    padding: 30px;
+}
+
+.image-content h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.image-content p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/* footer blu */
+footer {
+    background-color: #25a2c3;
+    color: white;
+    text-align: center;
+    padding: 50px 30px 30px;
+}
+
+footer h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: white;
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    margin: 40px 0 20px;
+}
+
+.copyright {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.copyright a {
+    color: white;
+}
+
+/* da mobile in su */
+
+/* tablet */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 40px 40px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero {
+        padding: 80px 40px;
+    }
+    
+    .section-white h2 {
+        font-size: 2.2rem;
+    }
+    
+    .full-width-img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* pc desktop */
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 50px 40px;
+        max-width: 1200px;
+    }
+    
+    .hero {
+        padding: 100px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+    }
+    
+    .section-white {
+        padding: 70px 0;
+    }
+    
+    .section-white p {
+        max-width: 700px;
+        margin: 0 auto 20px;
+    }
+    
+    .full-width-img {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .testimonial-section {
+        padding: 80px 30px;
+    }
+    
+    .images-section {
+        padding: 70px 0;
+    }
+    
+    .images-section .container {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .images-grid {
+        flex: 1;
+        max-width: 380px;
+        margin: 0;
+    }
+    
+    .images-grid img {
+        height: 250px;
+    }
+    
+    footer {
+        text-align: left;
+        padding: 60px 30px 40px;
+    }
+    
+    footer .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    footer h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    
+    .contact-info p {
+        margin-bottom: 0;
+        text-align: left;
+    }
+    
+    .copyright {
+        text-align: center;
+    }
+}
+
+/* schermo grande */
+@media screen and (min-width: 1366px) and (max-width: 1920px) {
+    .container {
+        width: 90%;
+        max-width: 1400px;
+    }
+    
+    body {
+        font-size: 1.25rem;
+    }
+    
+    .hero h1 {
+        font-size: 4rem;
+    }
+}
